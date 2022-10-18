@@ -1,0 +1,105 @@
+.banner {
+	position: relative;
+	@include adaptiv-value('padding-bottom', 113, 50, 0);
+	@include adaptiv-value('padding-top', 30, 5, 0);
+
+	.left-dec {
+		position: absolute;
+		left: 0;
+		top: -140px;
+		z-index: -1;
+		@media (max-width: $md3) {
+			width: 350px;
+		}
+		@media (max-width: 400px) {
+			width: 200px;
+		}
+	}
+
+	.right-dec {
+		position: absolute;
+		right: 0;
+		z-index: -1;
+		bottom: 20px;
+		@media (max-width: $md3) {
+			width: 350px;
+		}
+		@media (max-width: 400px) {
+			width: 200px;
+		}
+	}
+	&__body {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		@media (max-width: $md2) {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 30px;
+		}
+	}
+
+	&__info {
+		@include adaptiv-value('min-width', 495, 300, 0);
+		@include adaptiv-value('padding-top', 50, 20, 0);
+		max-width: 496px;
+		h1 {
+			font-weight: 700;
+			@include adaptiv-value('font-size', 52, 32, 0);
+			@include adaptiv-value('line-height', 63, 43, 0);
+			@include adaptiv-value('margin-bottom', 27, 19, 0);
+			@media (max-width: $md2) {
+				text-align: center;
+			}
+		}
+		h3 {
+			font-weight: 500;
+			@include adaptiv-value('font-size', 22, 16, 0);
+			line-height: 128.2%;
+			color: #979797;
+			@include adaptiv-value('margin-bottom', 56, 25, 0);
+			@media (max-width: $md2) {
+				text-align: center;
+			}
+		}
+
+		&-action {
+			display: flex;
+			gap: 21px;
+			flex-wrap: wrap;
+			@media (max-width: $md2) {
+				justify-content: center;
+			}
+
+			a {
+				padding: 14px 57px;
+				color: white;
+				font-weight: 700;
+				@include adaptiv-value('font-size', 25, 18, 0);
+				line-height: 128.2%;
+				transition: opacity 0.2s ease;
+				&:hover {
+					opacity: 0.5;
+				}
+			}
+
+			.catalog-btn {
+				background-color: $redColor;
+				border-radius: 7px;
+			}
+
+			.contacts-btn {
+				background: #16d7ff;
+				border-radius: 7px;
+			}
+		}
+	}
+
+	&__image {
+		img {
+			@include adaptiv-value('width', 471, 271, 0);
+			@include adaptiv-value('height', 568, 368, 0);
+		}
+	}
+}

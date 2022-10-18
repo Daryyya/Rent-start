@@ -1,0 +1,81 @@
+.small-market {
+	padding-top: 30px;
+	padding-bottom: 45px;
+	position: relative;
+
+	.left-dec {
+		position: absolute;
+		top: 100px;
+		@include adaptiv-value('left', -100, -50, 0);
+		z-index: -1;
+		@include adaptiv-value('width', 641, 160, 0);
+		@include adaptiv-value('height', 641, 160, 0);
+	}
+
+	.right-dec {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		top: 200px;
+		@include adaptiv-value('width', 641, 160, 0);
+		@include adaptiv-value('height', 641, 160, 0);
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		h2 {
+			font-weight: 700;
+			font-size: 42px;
+			line-height: 51px;
+			margin-bottom: 42px;
+			@include adaptiv-value('font-size', 42, 24, 0);
+		}
+
+		.filters {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 26px;
+			@include adaptiv-value('margin-bottom', 69, 20, 0);
+			@media (max-width: 550px) {
+				max-width: 300px;
+			}
+
+			&__item {
+				background: #f2f2ff;
+				border-radius: 7px;
+				font-weight: 600;
+				font-size: 19px;
+				@include adaptiv-value('font-size', 19, 16, 0);
+				@include adaptiv-value('padding-top', 13, 10, 0);
+				@include adaptiv-value('padding-bottom', 13, 10, 0);
+				@include adaptiv-value('padding-left', 40, 20, 0);
+				@include adaptiv-value('padding-right', 40, 20, 0);
+				cursor: pointer;
+				transition: all 0.2s ease;
+
+				&:hover {
+					background: $darkBlueColor;
+					color: white;
+				}
+
+				&.active-filter {
+					background: $logoGradient;
+					color: white;
+				}
+			}
+		}
+	}
+
+	&__products {
+		display: flex;
+		justify-content: center;
+		row-gap: 40px;
+		column-gap: 45px;
+		flex-wrap: wrap;
+	}
+}

@@ -1,0 +1,86 @@
+.event {
+	@include adaptiv-value('padding-top', 40, 5, 0);
+	@include adaptiv-value('padding-bottom', 40, 5, 0);
+	position: relative;
+	.green-dec {
+		position: absolute;
+		left: -50px;
+		z-index: -1;
+	}
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+		@media (max-width: $md2) {
+			flex-direction: column;
+		}
+	}
+
+	&__image {
+		@media (max-width: 400px) {
+			width: 250px;
+			height: 250px;
+		}
+	}
+
+	&__banner {
+		background: #eaeffa;
+		border-radius: 10px;
+		@include adaptiv-value('padding-top', 53, 23, 0);
+		@include adaptiv-value('padding-left', 61, 50, 0);
+		@include adaptiv-value('padding-bottom', 68, 30, 0);
+		@include adaptiv-value('padding-right', 190, 50, 0);
+
+		&-title {
+			font-weight: 700;
+			font-size: 36px;
+			@include adaptiv-value('font-size', 36, 21, 0);
+			line-height: 113.7%;
+			margin-bottom: 15px;
+		}
+		&-text {
+			font-weight: 500;
+			@include adaptiv-value('font-size', 18, 14, 0);
+			line-height: 120%;
+			color: $grayColor;
+			max-width: 510px;
+			margin-bottom: 30px;
+		}
+		&-btns {
+			display: flex;
+			gap: 17px;
+			@include adaptiv-value('gap', 17, 10, 0);
+			flex-wrap: wrap;
+
+			a {
+				padding: 12px 31px;
+				@include adaptiv-value('padding-top', 12, 8, 0);
+				@include adaptiv-value('padding-bottom', 12, 8, 0);
+				@include adaptiv-value('padding-left', 31, 15, 0);
+				@include adaptiv-value('padding-right', 31, 15, 0);
+				border-radius: 6px;
+				color: white;
+				font-weight: 700;
+				@include adaptiv-value('font-size', 22, 16, 0);
+				line-height: 125.7%;
+				transition: all 0.2s ease;
+				&:hover {
+					opacity: 0.5;
+				}
+				@media (max-width: $md3) {
+					width: 100%;
+					text-align: center;
+				}
+			}
+
+			.gift {
+				background: #ff5602;
+			}
+
+			.support {
+				background: $logoGradient;
+			}
+		}
+	}
+}

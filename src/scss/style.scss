@@ -1,0 +1,34 @@
+@use 'sass:math';
+
+@import 'base/mixins.scss';
+@import 'base/functions.scss';
+@import 'base/variables.scss';
+@import 'base/settings.scss';
+@import './fonts';
+
+// Компоненты
+@import './components/header';
+@import './components/hero';
+@import './components/cart';
+@import './components/small-market';
+@import './components/event';
+@import './components/product';
+@import './components/about';
+@import './components/request';
+@import './components/footer';
+@import './components/banner';
+
+// Контакты
+@import './components/contacts/contacts';
+
+// Блог
+@import './components/blog/blog';
+
+// Каталог
+@import './components/catalog/catalog';
+
+// Страница одного элемента блога
+@import './components/singleBlog/singleBlog';
+
+// 404, Регитсрация, Вход
+@import './components/static/static';
