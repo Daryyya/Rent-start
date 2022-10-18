@@ -33,7 +33,7 @@
 
 	&__decorated {
 		position: relative;
-		max-width: 440px;
+		max-width: 500px;
 
 		.decorated-left {
 			position: absolute;
@@ -134,4 +134,8 @@
 			@include adaptiv-value('gap', 52, 20, 0);
 		}
 	}
+}
+
+.hashtag {
+	color: #ff0640;
 }
