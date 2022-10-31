@@ -126,6 +126,7 @@
 
 			&-title {
 				font-weight: 600;
+				max-width: 400px;
 				@include adaptiv-value('font-size', 30, 18, 0);
 				line-height: 120%;
 				@include adaptiv-value('margin-bottom', 17, 5, 0);

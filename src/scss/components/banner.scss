@@ -2,6 +2,13 @@
 	position: relative;
 	@include adaptiv-value('padding-bottom', 113, 50, 0);
 	@include adaptiv-value('padding-top', 30, 5, 0);
+	overflow-y: hidden;
+	@media (min-width: 1800px) {
+		padding-bottom: 0;
+	}
+	@media (max-width: $md2) {
+		padding-bottom: 0 !important;
+	}
 
 	.left-dec {
 		position: absolute;
@@ -55,8 +62,8 @@
 		}
 		h3 {
 			font-weight: 500;
-			@include adaptiv-value('font-size', 22, 16, 0);
-			line-height: 128.2%;
+			@include adaptiv-value('font-size', 22, 14, 0);
+			line-height: 135.2%;
 			color: #979797;
 			@include adaptiv-value('margin-bottom', 56, 25, 0);
 			@media (max-width: $md2) {
@@ -97,9 +104,25 @@
 	}
 
 	&__image {
+		position: absolute;
+		right: 0;
+		top: -140px;
+		@media (min-width: 1800px) {
+			position: relative;
+		}
+		@media (max-width: 1250px) {
+			top: -80px;
+		}
+		@media (max-width: $md2) {
+			position: static;
+		}
 		img {
-			@include adaptiv-value('width', 471, 271, 0);
-			@include adaptiv-value('height', 568, 368, 0);
+			@media (max-width: 1250px) {
+				width: 500px;
+			}
+			@media (max-width: $md2) {
+				width: 100%;
+			}
 		}
 	}
 }

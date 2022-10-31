@@ -99,3 +99,9 @@
 		@include adaptiv-value('gap', 56, 20, 0);
 	}
 }
+
+.copyright {
+	@media (max-width: 500px) {
+		max-width: 200px;
+	}
+}
