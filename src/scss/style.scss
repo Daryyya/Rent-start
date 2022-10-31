@@ -41,8 +41,7 @@
 	align-items: center;
 	justify-content: center;
 	p {
-		color: black;
-		font-size: 20px;
 		color: white;
+		@include adaptiv-value('font-size', 20, 14, 0);
 	}
 }

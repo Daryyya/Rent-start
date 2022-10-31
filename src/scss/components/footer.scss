@@ -96,6 +96,7 @@
 	&__action {
 		display: flex;
 		flex-wrap: wrap;
+
 		@include adaptiv-value('gap', 56, 20, 0);
 	}
 }
