@@ -13,20 +13,3 @@ export function isWebp() {
 		document.documentElement.classList.add(className)
 	})
 }
-
-export const YandexMaps = () => {
-	const mapElem = document.querySelector('.map')
-
-	if (mapElem) {
-		ymaps = window.ymaps
-
-		function init() {
-			let map = new ymaps.Map('map', {
-				center: [61.06771306262594, 42.10699299999997],
-				zoom: 17
-			})
-		}
-
-		ymaps.ready(init)
-	}
-}

@@ -4,44 +4,6 @@
 @import 'base/functions.scss';
 @import 'base/variables.scss';
 @import 'base/settings.scss';
-@import './fonts';
 
-// Компоненты
-@import './components/header';
-@import './components/hero';
-@import './components/cart';
-@import './components/small-market';
-@import './components/event';
-@import './components/product';
-@import './components/about';
-@import './components/request';
-@import './components/footer';
-@import './components/banner';
-
-// Контакты
-@import './components/contacts/contacts';
-
-// Блог
-@import './components/blog/blog';
-
-// Каталог
-@import './components/catalog/catalog';
-
-// Страница одного элемента блога
-@import './components/singleBlog/singleBlog';
-
-// 404, Регитсрация, Вход
-@import './components/static/static';
-
-.development {
-	background: #000;
-	height: 50px;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	p {
-		color: white;
-		@include adaptiv-value('font-size', 20, 14, 0);
-	}
-}
+@import 'components/layout/header.scss';
+@import 'components/home/categories.scss';
