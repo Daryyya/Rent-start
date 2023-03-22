@@ -11,6 +11,7 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 60px;
+        align-items: center;
     }
 
     &__title {
@@ -21,10 +22,14 @@
 }
 
 .slide-nav {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    height: fit-content;
+
     &__btn {
         background-color: $blueColor;
         padding: 9px 27px;
-
     }
 }
 

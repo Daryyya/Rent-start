@@ -1,0 +1,90 @@
+.rent-terms {
+	padding-top: 100px;
+	padding-bottom: 26px;
+
+	&__body {
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+
+	// TODO вынести заголовки в глобальные стили
+	&__title {
+		font-size: 35px;
+		line-height: 1.2;
+		color: $blackColor;
+		margin-bottom: 30px;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+
+		h3 {
+			font-size: 18px;
+			line-height: 1.2;
+			color: $blackColor;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__list {
+		display: flex;
+        justify-content: space-between;
+
+		&:not(:last-child) {
+			margin-bottom: 45px;
+		}
+	}
+
+	&__item {
+		display: flex;
+	}
+
+    &__text {
+        width: 156px;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+}
+
+.marker {
+    display: grid;
+    place-items: center;
+	position: relative;
+	min-width: 88px;
+    margin-right: 23px;
+    
+	&__bg {
+		position: absolute;
+		top: 31px;
+		left: 0;
+		display: inline-block;
+		width: 100%;
+		height: 30px;
+		transform: skew(0deg, -20deg);
+
+		&_dark {
+			background-color: $blueColor;
+		}
+		&_light {
+			background-color: $lightblueColor;
+		}
+	}
+
+	&__text {
+		position: relative;
+		font-size: 55px;
+		line-height: 1.2;
+		color: $lightblueColor;
+		font-weight: 700;
+        padding: 5px;
+
+		&_dark {
+			color: $blueColor;
+		}
+
+		&__light {
+			color: $lightblueColor;
+		}
+	}
+}
