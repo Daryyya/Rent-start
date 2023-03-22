@@ -1,9 +1,22 @@
 .categories {
 	padding-top: 20px;
 	padding-bottom: 20px;
+	border-top: 1px solid #f3f9ff;
+	border-bottom: 1px solid #f3f9ff;
 	&__body {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+	}
+
+	&__item {
+		font-size: 15px;
+		line-height: 18px;
+		color: #7d7a7a;
+		cursor: pointer;
+		transition: color 0.2s ease;
+		&:hover {
+			color: $blueColor;
+		}
 	}
 }
