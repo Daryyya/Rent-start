@@ -1,0 +1,71 @@
+.contacts {
+    padding-top: 100px;
+    margin-bottom: 257px;
+
+    &__body {
+        padding: 70px 45px 36px;
+        position: relative;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        right: 15%;
+    }
+
+    &__wrap {
+        padding: 50px 40px 65px;
+        background-color: $blueColor;
+        border-radius: 3px;
+    }
+
+    &__info {
+       max-width: 656px;
+    }
+
+    &__title {
+        font-size: 42px;
+        line-height: 1.2;
+        color: $whiteColor;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 20px;
+        font-weight: 500;
+        color: $whiteColor;
+        margin-bottom: 41px;
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        label {
+            max-width: 300px;
+            color: $whiteColor;
+            line-height: 1.4;
+        }
+
+        button {
+            padding: 13px 73px;
+            min-width: 300px;
+            background-color: $lightblueColor;
+            border-radius: 3px;
+            color: $whiteColor;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 1.2;
+        }
+    }
+}
+
+.input-text {
+    padding: 15px;
+    min-width: 300px;
+}
+
+.text-underline {
+    text-decoration: underline ;
+}
