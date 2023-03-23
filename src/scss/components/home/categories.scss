@@ -6,7 +6,9 @@
 	&__body {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
+		gap: 15px 25px;
+		flex-wrap: wrap;
 	}
 
 	&__item {
