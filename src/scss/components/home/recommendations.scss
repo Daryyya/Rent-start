@@ -2,79 +2,131 @@
 	padding-top: 100px;
 	padding-bottom: 50px;
 
-    &__body {
-       padding-left: 45px;
-       padding-right: 45px;
+    @media (max-width: 576px) {
+        padding-top: 40px;
     }
 
-    &__topRow {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 60px;
-        align-items: center;
-    }
+	&__body {
+		@include adaptiv-value('padding-left', 45, 10, 0);
+		@include adaptiv-value('padding-right', 45, 10, 0);
+	}
 
-    &__title {
-        font-size: 35px;
-        line-height: 1.2;
-        color: $blackColor;
-    }
+	&__topRow {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 60px;
+		align-items: center;
+
+		@media (max-width: 576px) {
+			flex-direction: column;
+			gap: 20px;
+			align-items: center;
+            margin-bottom: 30px;
+		}
+	}
+
+	&__title {
+		font-size: 35px;
+		line-height: 1.2;
+		color: $blackColor;
+
+		@media (max-width: 991px) {
+			font-size: 28px;
+		}
+
+        @media (max-width: 375px) {
+			font-size: 22px;
+		}
+	}
 }
 
 .slide-nav {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 20px;
-    height: fit-content;
+	display: grid;
+	grid-auto-flow: column;
+	gap: 20px;
+	height: fit-content;
 
-    &__btn {
-        background-color: $blueColor;
-        padding: 9px 27px;
-    }
+	&__btn {
+		background-color: $blueColor;
+		padding: 9px 27px;
+	}
 }
 
 .grid-container {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	overflow-x: hidden;
 }
 
 .card {
-    max-width: 340px;
+	min-width: 340px;
 	display: flex;
 	flex-direction: column;
-	padding: 35px 37px;
+	justify-content: space-between;
+	@include adaptiv-value('padding-right', 37, 15, 0);
+	@include adaptiv-value('padding-left', 37, 15, 0);
+	padding-top: 35px;
+	padding-bottom: 35px;
 	border: 1px solid $greyColor;
 	border-radius: 3px;
+
+	@media (max-width: 375px) {
+		min-width: 100%;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 
 	&__imageWrap {
 		display: grid;
 		place-items: center;
-        margin-bottom: 31px;
+		margin-bottom: 31px;
+
+		@media (max-width: 991px) {
+			margin-bottom: 20px;
+		}
 	}
 
-    h3 {
-        font-size: 23px;
-        line-height: 1.2;
-        color: $blackColor;
-        margin-bottom: 18px;
-    }
+	h3 {
+		font-size: 23px;
+		line-height: 1.2;
+		color: $blackColor;
+		margin-bottom: 18px;
 
-    p {
-        font-size: 18px;
-        line-height: 1.4;
-        color: $blackColor;
-        margin-bottom: 13px;
-        &:last-of-type {
-            margin-bottom: 39px;
-        }
-    }
+		@media (max-width: 576px) {
+			font-size: 18px;
+		} 
+	}
 
-    &__btn {
-        font-size: 18px;
-        line-height: 1.4;
-        padding: 10px 20px;
-        background-color: $blueColor;
-        color: $whiteColor;
-        border-radius: 3px;
-    }
+	p {
+		font-size: 18px;
+		line-height: 1.4;
+		color: $blackColor;
+		margin-bottom: 13px;
+		&:last-of-type {
+			margin-bottom: 39px;
+		}
+
+		@media (max-width: 576px) {
+			font-size: 15px;
+			margin-bottom: 10px;
+
+			&:last-of-type {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__btn {
+		font-size: 18px;
+		line-height: 1.4;
+		padding: 10px 20px;
+		background-color: $blueColor;
+		color: $whiteColor;
+		border-radius: 3px;
+
+		@media (max-width: 576px) {
+			font-size: 15px;
+		}
+	}
 }

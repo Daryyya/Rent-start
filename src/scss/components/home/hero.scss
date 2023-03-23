@@ -29,6 +29,10 @@
 				@media (max-width: 576px) {
 					font-size: 34px;
 				}
+
+				@media (max-width: 375px) {
+					font-size: 26px;
+				}
 			}
 
 			ul {
@@ -40,6 +44,10 @@
 				li {
 					font-size: 18px;
 					line-height: 22px;
+
+					@media (max-width: 375px) {
+						font-size: 15px;
+					}
 				}
 			}
 
@@ -59,6 +67,10 @@
 				&:hover {
 					background: #232e54;
 				}
+
+				@media (max-width: 576px) {
+					font-size: 18px;
+				}
 			}
 		}
 
@@ -73,6 +85,13 @@
 			img {
 				width: 100%;
 				height: auto;
+			}
+
+			@media (max-width: 991px) {
+				img {
+					width: 50%;
+					height: auto;
+				}
 			}
 
 			@media (max-width: 576px) {
