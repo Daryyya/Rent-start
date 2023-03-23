@@ -1,4 +1,7 @@
 .header {
+	@media (max-width: 991px) {
+		display: none;
+	}
 	&__top {
 		background: $blueColor;
 		padding-top: 20px;
