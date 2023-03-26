@@ -5,12 +5,20 @@
 	.container {
 		padding-top: 60px;
 		padding-bottom: 79px;
+
+		@media (max-width: 991px) {
+			padding-top: 40px;
+		}
 	}
 
 	&__topRow {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 36px;
+		@media (max-width: 991px) {
+			row-gap: 55px;
+			flex-direction: column;
+		}
 	}
 
 	&__bottomRow {
@@ -30,21 +38,29 @@
 	&__contacts {
 		display: flex;
 		align-items: center;
+		gap: 55px;
+		@media (max-width: 1200px) {
+			gap: 30px;
+		}
+		@media (max-width: 576px) {
+			flex-direction: column;
+			gap: 20px;
+		}
 
-		p {
-			margin-right: 55px;
-
+		p, a {
+			display: flex;
+			align-items: center;
 			img {
 				margin-right: 12px;
+				@media (max-width: 1200px) {
+					margin-right: 8px;
+				}
 			}
 		}
 
+		// p {}
 		a {
 			color: inherit;
-
-			img {
-				margin-right: 12px;
-			}
 		}
 	}
 
@@ -112,10 +128,15 @@
 .menu {
 	ul {
 		display: flex;
+		column-gap: 23px;
+		row-gap: 16px;
+		flex-wrap: wrap;
+		@media (max-width: 1200px) {
+			column-gap: 16px;
+			justify-content: center;
+		}
 
 		li {
-			margin-right: 23px;
-
 			a {
 				color: inherit;
 				font-size: 14px;
