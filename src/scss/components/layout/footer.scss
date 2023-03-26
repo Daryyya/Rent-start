@@ -1,8 +1,8 @@
 .footer {
 	background-color: $darkblueColor;
 	color: $whiteColor;
-
-	&__body {
+	
+	.container {
 		padding-top: 60px;
 		padding-bottom: 79px;
 	}
@@ -15,7 +15,7 @@
 
 	&__bottomRow {
 		display: flex;
-        justify-content: space-between;
+		justify-content: space-between;
 	}
 
 	&__image {
@@ -51,7 +51,6 @@
 	&__list {
 		display: flex;
 		flex-direction: column;
-		flex-wrap: wrap;
 		max-height: 132px;
 		margin-right: 37px;
 
@@ -65,37 +64,49 @@
 		}
 	}
 
+	.input-wrapper {
+		position: relative;
+	}
+
 	&__input {
 		background-color: transparent;
 		border: 1px solid $whiteColor;
 		padding: 10px 46px;
 		border-radius: 7px;
-        max-width: 270px;
-        margin-right: 42px;
+		max-width: 270px;
+		margin-right: 42px;
 
-        &::placeholder {
-            color: $whiteColor;
-            font-size: 15px;
-        }
+		&::placeholder {
+			color: $whiteColor;
+			font-size: 15px;
+		}
+
+		@media (max-width: 1200px) {
+			padding: 10px 15px;;
+		}
 	}
 
-    &__input-img {
-        position: relative;
-        top: 4px;
-        left: 40px;
-    }
+	&__input-img {
+		position: absolute;
+		top: 10px;
+		left: 15px;
 
-    &__btn {
-        padding: 10px 30px;
-        background-color: $blueColor;
-        border-radius: 7px;
-        flex-shrink: 0;
-        max-height: 43px;
-        color: $whiteColor;
-        font-size: 17px;
-        line-height: 1.2;
-        font-weight: 700;
-    }
+		@media (max-width: 1200px) {
+			display: none;
+		}
+	}
+
+	&__btn {
+		padding: 10px 30px;
+		background-color: $blueColor;
+		border-radius: 7px;
+		flex-shrink: 0;
+		max-height: 43px;
+		color: $whiteColor;
+		font-size: 17px;
+		line-height: 1.2;
+		font-weight: 700;
+	}
 }
 
 .menu {
