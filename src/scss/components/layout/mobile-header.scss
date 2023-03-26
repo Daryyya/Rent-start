@@ -91,6 +91,9 @@
 	span {
 		color: $blackColor;
 	}
+	img {
+		filter: invert(1);
+	}
 
 	&:hover {
 		opacity: 0.5;

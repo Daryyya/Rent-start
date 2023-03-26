@@ -34,20 +34,20 @@
 			gap: 20px;
 		}
 
-		p, a {
+		 a {
 			display: flex;
 			align-items: center;
+			color: inherit;
 			img {
 				margin-right: 12px;
 				@media (max-width: 1200px) {
 					margin-right: 8px;
 				}
 			}
-		}
 
-		// p {}
-		a {
-			color: inherit;
+			&:hover {
+				opacity: 0.9;
+			}
 		}
 	}
 }
@@ -68,6 +68,10 @@
 				color: inherit;
 				font-size: 14px;
 				line-height: 1.2;
+
+				&:hover {
+					opacity: 0.9;
+				}
 			}
 		}
 	}
@@ -108,6 +112,10 @@
 			a {
 				font-size: 15px;
 				color: inherit;
+
+				&:hover {
+					opacity: 0.9;
+				}
 			}
 		}
 	}
@@ -179,6 +187,10 @@
 		font-size: 17px;
 		line-height: 1.2;
 		font-weight: 700;
+
+		&:hover {
+			opacity: 0.9;
+		}
 	}
 
 	&__search {

@@ -49,6 +49,10 @@
 	&__btn {
 		background-color: $blueColor;
 		padding: 9px 27px;
+
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 }
 
@@ -124,6 +128,10 @@
 		background-color: $blueColor;
 		color: $whiteColor;
 		border-radius: 3px;
+
+		&:hover {
+			opacity: 0.9;
+		}
 
 		@media (max-width: 576px) {
 			font-size: 15px;
