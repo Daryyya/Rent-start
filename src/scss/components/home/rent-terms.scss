@@ -13,18 +13,10 @@
 
 	// TODO вынести заголовки в глобальные стили
 	&__title {
-		font-size: 35px;
+		@include adaptiv-value('font-size', 35, 22, 0);
 		line-height: 1.2;
 		color: $blackColor;
 		margin-bottom: 30px;
-
-		@media (max-width: 991px) {
-			font-size: 28px;
-		}
-
-        @media (max-width: 375px) {
-			font-size: 22px;
-		}
 	}
 
 	&__info {
@@ -39,7 +31,6 @@
 
 			@media (max-width: 576px) {
 				align-self: center;
-				font-size: 18px;
 			}
 		}
 	}
@@ -48,15 +39,16 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 14px;
+
+		&:not(:last-child) {
+			margin-bottom: 45px;
+		}
+
 		@media (max-width: 991px) {
 			flex-wrap: wrap;
 			justify-content: space-around;
 			max-width: 650px;
 			margin: 0 auto;
-		}
-
-		&:not(:last-child) {
-			margin-bottom: 45px;
 		}
 	}
 

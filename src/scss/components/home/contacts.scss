@@ -1,9 +1,12 @@
 .contacts {
-    padding-top: 100px;
-    margin-bottom: 257px;
+    @include adaptiv-value('padding-top', 100, 30, 0);
+    @include adaptiv-value('margin-bottom', 257, 50, 0);
 
     &__body {
-        padding: 70px 45px 36px;
+        @include adaptiv-value('padding-left', 45, 10, 0);
+		@include adaptiv-value('padding-right', 45, 10, 0);
+        @include adaptiv-value('padding-top', 70, 10, 0);
+        @include adaptiv-value('padding-bottom', 36, 10, 0);
         position: relative;
     }
 
@@ -11,36 +14,57 @@
         position: absolute;
         top: 0;
         right: 15%;
+
+        @media (max-width: 1200px) {
+            right: 3%;
+        }
+
+        @media (max-width: 991px) {
+            display: none;
+        }
     }
 
     &__wrap {
-        padding: 50px 40px 65px;
+        @include adaptiv-value('padding-left', 40, 15, 0);
+		@include adaptiv-value('padding-right', 40, 15, 0);
+        @include adaptiv-value('padding-top', 50, 20, 0);
+        @include adaptiv-value('padding-bottom', 65, 25, 0);
         background-color: $blueColor;
         border-radius: 3px;
     }
 
     &__info {
-       max-width: 656px;
+        max-width: 656px;
     }
 
     &__title {
-        font-size: 42px;
+        @include adaptiv-value('font-size', 42, 22, 0);
         line-height: 1.2;
         color: $whiteColor;
         margin-bottom: 20px;
     }
 
     &__text {
-        font-size: 20px;
+        @include adaptiv-value('font-size', 20, 16, 0);
         font-weight: 500;
         color: $whiteColor;
-        margin-bottom: 41px;
+        @include adaptiv-value('margin-bottom', 41, 20, 0);
     }
 
     &__form {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 300px 300px;
         gap: 20px;
+
+        @media (max-width: 991px) {
+            grid-template-columns: 270px 270px; 
+        }
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
+        
 
         label {
             max-width: 300px;
@@ -49,8 +73,7 @@
         }
 
         button {
-            padding: 13px 73px;
-            min-width: 300px;
+            padding: 13px 30px;
             background-color: $lightblueColor;
             border-radius: 3px;
             color: $whiteColor;
@@ -63,7 +86,6 @@
 
 .input-text {
     padding: 15px;
-    min-width: 300px;
 }
 
 .text-underline {
